@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eBay Size許容値 早見表｜「One Size」が使える場所、使えない場所</title>
+<meta name="description" content="eBayのItem Specifics「Size」欄に書ける言葉はカテゴリごとに決まっています。帽子・Tシャツ・スーツ・バッグ別の許容値早見表と、AIスキルに追加する指示文。">
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#faf6ef;
+  --card:#ffffff;
+  --ink:#4a4038;
+  --sub:#8a7d70;
+  --line:#eee4d6;
+  --accent:#e08a5c;
+  --accent-deep:#c96f41;
+  --accent-soft:#fbeee2;
+  --ok:#3d8b5f;--ok-bg:#e7f4ec;
+  --ng:#c75146;--ng-bg:#fbe9e6;
+  --opt:#9a7b2d;--opt-bg:#f7f0da;
+  --code-bg:#f6f1e8;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",-apple-system,sans-serif;line-height:1.9;margin:0;font-size:15.5px}
+.wrap{max-width:860px;margin:0 auto;padding:44px 20px 90px}
+header{text-align:left;margin-bottom:30px}
+.eyebrow{display:inline-block;background:var(--accent-soft);color:var(--accent-deep);font-size:12.5px;font-weight:700;letter-spacing:.08em;padding:4px 14px;border-radius:999px}
+h1{font-weight:900;font-size:clamp(25px,4.5vw,36px);margin:14px 0 10px;line-height:1.4;text-wrap:balance}
+.lede{color:var(--sub);margin:0;max-width:40em}
+h2{font-weight:900;font-size:20px;margin:52px 0 6px;line-height:1.5}
+h2 .mark{color:var(--accent);margin-right:6px}
+.h2sub{color:var(--sub);font-size:13.5px;margin:0 0 18px}
+.bigpoint{background:var(--card);border:2px solid var(--accent);border-radius:18px;padding:20px 24px;margin:26px 0;box-shadow:0 4px 14px rgba(200,150,100,.08)}
+.bigpoint .bp-title{font-weight:900;color:var(--accent-deep);font-size:17px;margin:0 0 6px}
+.bigpoint p{margin:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 3px 10px rgba(160,130,100,.06)}
+.card h3{margin:0 0 2px;font-size:17px;font-weight:900;display:flex;align-items:center;gap:8px}
+.card .icon{font-size:22px}
+.card .cid{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--sub);font-weight:400;margin:0 0 12px}
+.verdicts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 12px;border-radius:999px;font-weight:700;font-size:12.5px;white-space:nowrap}
+.chip.ok{background:var(--ok-bg);color:var(--ok)}
+.chip.ng{background:var(--ng-bg);color:var(--ng)}
+.chip.opt{background:var(--opt-bg);color:var(--opt)}
+.card p{margin:0;font-size:13.8px}
+.card p + p{margin-top:8px}
+.card .how{background:var(--accent-soft);border-radius:12px;padding:10px 14px;margin-top:12px;font-size:13.5px}
+.card .how b{color:var(--accent-deep)}
+code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--code-bg);padding:1px 6px;border-radius:6px;color:#7a5a3a}
+ul.soft{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+ul.soft li{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 18px;font-size:14px}
+ul.soft .lbl{font-weight:900;color:var(--accent-deep);margin-right:6px}
+.instbox{position:relative;margin-top:6px}
+pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px 22px 22px;white-space:pre-wrap;font-family:"Zen Maru Gothic",sans-serif;font-size:13.5px;line-height:1.95;margin:0;box-shadow:0 3px 10px rgba(160,130,100,.06)}
+.copybtn{position:sticky;float:right;top:10px;margin:10px 10px 0 0;transform:translateY(0);background:var(--accent);color:#fff;border:none;border-radius:999px;padding:8px 20px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(200,120,70,.3);position:absolute;right:12px;top:12px}
+.copybtn:hover{background:var(--accent-deep)}
+.copybtn:focus-visible{outline:3px solid var(--accent-deep);outline-offset:2px}
+.src{color:var(--sub);font-size:12.5px;margin-top:34px;line-height:1.8}
+@media (prefers-reduced-motion: no-preference){
+  .card{transition:transform .15s ease}
+  .card:hover{transform:translateY(-2px)}
+}
+</style>
+<div class="wrap">
+<header>
+<span class="eyebrow">eBay出品のサイズ欄ルール</span>
+<h1>「One Size」が使える場所、<br>使えない場所</h1>
+<p class="lede">eBayに出品するとき、商品の詳細情報（Item Specifics）の「Size」欄に書いていい言葉は、実は<b>カテゴリごとに決まっています</b>。リストにない言葉を書くと「902:ebay更新エラー」になって出品できません。このページはeBay公式のデータ（2026年9月1日調べ）をもとにした早見表です。</p>
+</header>
+
+<div class="bigpoint">
+<p class="bp-title">いちばん大事なこと</p>
+<p>帽子では「One Size」でOKでしたが、<b>メンズスーツとバッグでは「One Size」は使えません</b>。「迷ったら One Size」というルールを全部のカテゴリに使い回すと、エラーになります。下のカテゴリ別カードで確認してください。</p>
+</div>
+
+<h2><span class="mark">●</span>カテゴリ別の早見表</h2>
+<p class="h2sub">◎=使える ／ ×=使えない です。</p>
+
+<div class="cards">
+
+<div class="card">
+<h3><span class="icon">🧢</span>帽子</h3>
+<p class="cid">メンズ 52365 ／ レディース 45230</p>
+<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ng">S/M・M/L ×</span></div>
+<p>使えるのは XS〜XL、帽子サイズの数字（例 <code>7 1/2</code>）、<code>One Size</code> だけです。</p>
+<div class="how"><b>書き方:</b> フリーサイズ・Free・「58cm」などのcm表記・S/M → ぜんぶ <code>One Size</code> に。「7 1/2 / 59.6cm」のような併記は <code>7 1/2</code> だけ残します。<code>Adjustable</code> はレディースのみOK（メンズは×）。</div>
+</div>
+
+<div class="card">
+<h3><span class="icon">👕</span>Tシャツ・トップス</h3>
+<p class="cid">メンズTシャツ 15687 ／ レディーストップス 53159</p>
+<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ok">S/M・M/L ◎</span></div>
+<p>ここはゆるめです。<code>One Size</code> も、<code>S/M</code>・<code>M/L</code>・<code>L/XL</code> のような表記も、XS〜XLや数字サイズもそのまま使えます。</p>
+<div class="how"><b>書き方:</b> フリーサイズだけ <code>One Size</code> に直せばOKです。</div>
+</div>
+
+<div class="card">
+<h3><span class="icon">🤵</span>スーツ（メンズ）</h3>
+<p class="cid">3001</p>
+<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ng">One Size ×</span><span class="chip ng">S/M ×</span><span class="chip ng">空欄も ×</span></div>
+<p>いちばん厳しいカテゴリです。<code>One Size</code> も複合表記も使えず、空欄にもできません。</p>
+<div class="how"><b>書き方:</b> 決められた76種類（2XS〜8XL、数字28〜62、Big系、Tall系、IT・EU・FR表記）の中から、実寸に合うものを必ず選びます。</div>
+</div>
+
+<div class="card">
+<h3><span class="icon">👩‍💼</span>スーツ（レディース）</h3>
+<p class="cid">63865</p>
+<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ok">S/M ◎</span></div>
+<p>メンズと違ってこちらはゆるめです。<code>One Size</code> も <code>S/M</code> などもOKです。</p>
+</div>
+
+<div class="card">
+<h3><span class="icon">🧥</span>コート・ジャケット（メンズ）</h3>
+<p class="cid">57988</p>
+<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ng">S/M・M/L ×</span></div>
+<p><code>One Size</code> は使えますが、<code>S/M</code>・<code>M/L</code> のような複合表記は使えません。XS〜XLや数字サイズはOKです。</p>
+</div>
+
+<div class="card">
+<h3><span class="icon">👜</span>バッグ</h3>
+<p class="cid">レディース 169291 ／ メンズ 52357</p>
+<div class="verdicts"><span class="chip opt">Size欄は入れなくてOK</span><span class="chip ng">One Size ×</span></div>
+<p>使えるのは <code>Micro / Mini / Small / Medium / Large / Extra Large / Nano</code> の7つだけ。<code>One Size</code> は使えません。</p>
+<div class="how"><b>書き方:</b> 迷ったら<b>空欄のまま</b>にするのが安全です（もともと必須ではありません）。入れるなら大きさに合わせて <code>Small</code> / <code>Medium</code> / <code>Large</code> などを選びます。</div>
+</div>
+
+</div>
+
+<h2><span class="mark">●</span>サイズのほかに必ず入れる項目</h2>
+<p class="h2sub">ここが空欄でも同じようにエラーになる可能性があります。</p>
+<ul class="soft">
+<li><span class="lbl">洋服のカテゴリ:</span> <code>Size Type</code>（Regular / Big &amp; Tall などから選ぶ）・<code>Department</code>・<code>Brand</code>・<code>Color</code> も必須です。</li>
+<li><span class="lbl">バッグ:</span> <code>Brand</code>・<code>Exterior Material</code>（メンズは <code>Material</code>）・<code>Style</code>・<code>Exterior Color</code>（メンズは <code>Color</code>）・<code>Department</code> が必須です。</li>
+<li><span class="lbl">共通の約束:</span> 必須の欄に「NA」のような仮の言葉を入れない。実寸のcmはタイトルや説明文に書けば情報は残せます。</li>
+</ul>
+
+<h2><span class="mark">●</span>スキルに追加する時の指示文</h2>
+<p class="h2sub">AIにルールを覚えさせる時は、下の文をそのままコピーして貼り付けてください。</p>
+<div class="instbox">
+<button class="copybtn" id="copyBtn" type="button">コピー</button>
+<pre class="inst" id="instText">eBayの Item Specifics「Size」のルールを、翻訳スキル（Item Specifics 生成規則）に追加してください。
+
+【原則】
+- Size は eBay 公式の許容値のみ使用する。許容値はカテゴリごとに異なるため、「迷ったら One Size」を全カテゴリ共通にしない。リスト外の値（Free / 58cm / 55-61cm / NA 等）は「902:ebay更新エラー」で登録に失敗する（2026-09-01 Taxonomy API 実測）。
+- 実寸 cm は Title・Description に残す（情報は失われない）。
+- 必須 Item Specifics に「NA」等のプレースホルダを入れない。
+
+【カテゴリ別ルール】
+1. 帽子（Men 52365 / Women 45230 / Boys 57884）: 許容値は XS / S / M / L / XL / 帽子サイズ数値（6〜8 1/2、例 7 1/2）/ One Size。Adjustable は Women・Boys のみ可（Men 52365 には無い）。S/M・M/L 等の複合表記は不可。変換: フリーサイズ・Free・単独cm・範囲cm・S/M・M/L → One Size。「7 1/2 / 59.6cm」等の併記 → 7 1/2 のみ。
+2. Tシャツ・トップス（メンズTシャツ 15687 / レディーストップス 53159）: One Size 可。S/M / M/L / L/XL / XS/S の複合表記も可。XS〜XL 等の文字サイズ・数値サイズも可。フリーサイズ → One Size。
+3. メンズスーツ（Suits &amp; Suit Separates 3001）: One Size 不可。S/M 等の複合表記も不可。Size 必須のため空欄も不可。許容76種（2XS〜8XL / 数値28〜62 / Big 1X〜6X / ST・MT・LT〜6XLT の Tall 系 / IT・EU・FR 表記）から実寸に基づき必ず選ぶ。
+4. レディーススーツ（63865）: One Size 可。S/M 等の複合表記も可。
+5. メンズコート・ジャケット（57988）: One Size 可。S/M・M/L は不可。
+6. バッグ（レディース 169291 / メンズ 52357）: Size は必須ではない。許容値は Micro / Mini / Small / Medium / Large / Extra Large / Nano の7種のみで One Size 不可。判断できなければ Size は空欄にする（無理に入れない）。入れる場合は実寸に応じて Small / Medium / Large 等。
+
+【Size 以外の必須項目】
+- 衣類カテゴリ: Size Type（Regular / Big &amp; Tall 等の選択式）・Department・Brand・Color も必須。空欄にしない。
+- バッグ: Brand・Exterior Material（メンズは Material）・Style・Exterior Color（メンズは Color）・Department が必須。空欄にしない。
+- 上記以外のカテゴリで Size を求められた場合は、リスト外の値を推測で入れず、公式許容値（Taxonomy API getItemAspectsForCategory）を確認してから入れる。</pre>
+</div>
+
+<p class="src">出典: eBay公式 Taxonomy API（getItemAspectsForCategory、アメリカのカテゴリツリー）を2026年9月1日に実測した結果です。子供用（ボーイズ 57884 など）は出品しない方針のため、カードからは省いています。API上ではSize欄は自由入力の扱いですが、EAGLE経由の実際の登録ではリスト外の値がエラーになった実績があります（エラー判定がeBay側かEAGLE側かは未確認）。</p>
+</div>
+<script>
+document.getElementById('copyBtn').addEventListener('click',function(){
+  var t=document.getElementById('instText').innerText;
+  var btn=this;
+  function done(ok){btn.textContent=ok?'コピーしました！':'選択しました。Cmd+Cを押してください';setTimeout(function(){btn.textContent='コピー';},2500);}
+  function fallback(){
+    try{
+      var r=document.createRange();r.selectNodeContents(document.getElementById('instText'));
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      done(document.execCommand('copy'));
+    }catch(e2){done(false);}
+  }
+  try{
+    navigator.clipboard.writeText(t).then(function(){done(true);},function(){fallback();});
+  }catch(e){fallback();}
+});
+</script>
+
+</body>
+</html>
