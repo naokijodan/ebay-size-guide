@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>eBay Size許容値 早見表｜「One Size」が使える場所、使えない場所</title>
-<meta name="description" content="eBayのItem Specifics「Size」欄に書ける言葉はカテゴリごとに決まっています。帽子・Tシャツ・スーツ・バッグ別の許容値早見表と、AIスキルに追加する指示文。">
+<title>eBayアパレル出品 必須項目ガイド｜必須項目とSize×Size Typeの早見表</title>
+<meta name="description" content="eBayのアパレル出品でItem Specificsの必須項目を全部そろえる方法。SizeとSize Typeの組み合わせルール、カテゴリ別の必須項目早見表、AIスキルに追加する指示文をまとめました。">
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -25,38 +25,45 @@
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",-apple-system,sans-serif;line-height:1.9;margin:0;font-size:15.5px}
-.wrap{max-width:860px;margin:0 auto;padding:44px 20px 90px}
+.wrap{max-width:900px;margin:0 auto;padding:44px 20px 90px}
 header{text-align:left;margin-bottom:30px}
 .eyebrow{display:inline-block;background:var(--accent-soft);color:var(--accent-deep);font-size:12.5px;font-weight:700;letter-spacing:.08em;padding:4px 14px;border-radius:999px}
 h1{font-weight:900;font-size:clamp(25px,4.5vw,36px);margin:14px 0 10px;line-height:1.4;text-wrap:balance}
-.lede{color:var(--sub);margin:0;max-width:40em}
+.lede{color:var(--sub);margin:0;max-width:44em}
 h2{font-weight:900;font-size:20px;margin:52px 0 6px;line-height:1.5}
 h2 .mark{color:var(--accent);margin-right:6px}
 .h2sub{color:var(--sub);font-size:13.5px;margin:0 0 18px}
+.grouph3{font-size:16px;font-weight:900;color:var(--accent-deep);margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent-soft)}
 .bigpoint{background:var(--card);border:2px solid var(--accent);border-radius:18px;padding:20px 24px;margin:26px 0;box-shadow:0 4px 14px rgba(200,150,100,.08)}
 .bigpoint .bp-title{font-weight:900;color:var(--accent-deep);font-size:17px;margin:0 0 6px}
 .bigpoint p{margin:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
-.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 3px 10px rgba(160,130,100,.06)}
-.card h3{margin:0 0 2px;font-size:17px;font-weight:900;display:flex;align-items:center;gap:8px}
-.card .icon{font-size:22px}
-.card .cid{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--sub);font-weight:400;margin:0 0 12px}
+.bigpoint ol{margin:10px 0 0;padding-left:1.35em}
+.bigpoint li{margin:6px 0}
+.bigpoint li b{color:var(--accent-deep)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin-bottom:8px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 3px 10px rgba(160,130,100,.06)}
+.card h3{margin:0 0 2px;font-size:16.5px;font-weight:900;display:flex;align-items:center;gap:8px}
+.card .icon{font-size:20px}
+.card .cid{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--sub);font-weight:400;margin:0 0 10px;word-break:break-word}
 .verdicts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
-.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 12px;border-radius:999px;font-weight:700;font-size:12.5px;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:2px 10px;border-radius:999px;font-weight:700;font-size:11.5px;white-space:nowrap}
 .chip.ok{background:var(--ok-bg);color:var(--ok)}
 .chip.ng{background:var(--ng-bg);color:var(--ng)}
 .chip.opt{background:var(--opt-bg);color:var(--opt)}
-.card p{margin:0;font-size:13.8px}
-.card p + p{margin-top:8px}
-.card .how{background:var(--accent-soft);border-radius:12px;padding:10px 14px;margin-top:12px;font-size:13.5px}
-.card .how b{color:var(--accent-deep)}
+.card p{margin:0 0 8px;font-size:13.2px;line-height:1.75}
+.card p:last-child{margin-bottom:0}
+.card p b{color:var(--accent-deep);font-weight:700}
 code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--code-bg);padding:1px 6px;border-radius:6px;color:#7a5a3a}
-ul.soft{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-ul.soft li{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 18px;font-size:14px}
-ul.soft .lbl{font-weight:900;color:var(--accent-deep);margin-right:6px}
+.tablewrap{overflow-x:auto;margin:14px 0;border-radius:14px;border:1.5px solid var(--line)}
+table.cmp{width:100%;border-collapse:collapse;font-size:13.3px;min-width:600px;background:var(--card)}
+table.cmp th,table.cmp td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;line-height:1.7}
+table.cmp th:last-child,table.cmp td:last-child{border-right:none}
+table.cmp tr:last-child td{border-bottom:none}
+table.cmp th{background:var(--accent-soft);color:var(--accent-deep);font-weight:700;white-space:nowrap}
+table.cmp td.q{font-family:"IBM Plex Mono",monospace;font-size:12px}
 .instbox{position:relative;margin-top:6px}
 pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:24px 22px 22px;white-space:pre-wrap;font-family:"Zen Maru Gothic",sans-serif;font-size:13.5px;line-height:1.95;margin:0;box-shadow:0 3px 10px rgba(160,130,100,.06)}
-.copybtn{position:sticky;float:right;top:10px;margin:10px 10px 0 0;transform:translateY(0);background:var(--accent);color:#fff;border:none;border-radius:999px;padding:8px 20px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(200,120,70,.3);position:absolute;right:12px;top:12px}
+.copybtn{background:var(--accent);color:#fff;border:none;border-radius:999px;padding:8px 20px;font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;box-shadow:0 2px 8px rgba(200,120,70,.3);position:absolute;right:12px;top:12px}
 .copybtn:hover{background:var(--accent-deep)}
 .copybtn:focus-visible{outline:3px solid var(--accent-deep);outline-offset:2px}
 .src{color:var(--sub);font-size:12.5px;margin-top:34px;line-height:1.8}
@@ -64,106 +71,398 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
   .card{transition:transform .15s ease}
   .card:hover{transform:translateY(-2px)}
 }
+@media (max-width:480px){
+  .wrap{padding:32px 14px 70px}
+  .card{padding:16px}
+}
 </style>
 <div class="wrap">
 <header>
-<span class="eyebrow">eBay出品のサイズ欄ルール</span>
-<h1>「One Size」が使える場所、<br>使えない場所</h1>
-<p class="lede">eBayに出品するとき、商品の詳細情報（Item Specifics）の「Size」欄に書いていい言葉は、実は<b>カテゴリごとに決まっています</b>。リストにない言葉を書くと「902:ebay更新エラー」になって出品できません。このページはeBay公式のデータ（2026年9月1日調べ）をもとにした早見表です。</p>
+<span class="eyebrow">eBay出品のアパレルルール</span>
+<h1>アパレルは必須項目を全部そろえないと<br>出品できない</h1>
+<p class="lede">2026年9月から服・靴・帽子・バッグで「902:ebay更新エラー」が増えています。原因の多くは、Item Specifics(商品の詳細情報)の必須項目が埋まっていないことと、Size と Size Type の組み合わせ違反です。このページはeBay公式データ(2026年9月2日調べ)をもとにした早見表です。</p>
 </header>
 
 <div class="bigpoint">
-<p class="bp-title">いちばん大事なこと</p>
-<p>帽子では「One Size」でOKでしたが、<b>メンズスーツとバッグでは「One Size」は使えません</b>。「迷ったら One Size」というルールを全部のカテゴリに使い回すと、エラーになります。下のカテゴリ別カードで確認してください。</p>
+<p class="bp-title">いちばん大事な3つの決め事</p>
+<ol>
+<li><b>Size Type は常に Regular にする。</b>大きいサイズ専門で出品する場合以外は、他の値を選ばない。</li>
+<li><b>Size は文字サイズ S・M・L・XL だけを使う。</b>タグに数字が書いてあっても、実寸から文字サイズに読み替える。cm・Free・裸の数字はそのまま使わない。One Size は帽子・小物だけで使う。</li>
+<li><b>必須項目に NA を入れない。</b>Department は Men か Women のどちらかにする。Color は公式17色から選ぶ。Brand は不明なら Unbranded にする。</li>
+</ol>
 </div>
 
-<h2><span class="mark">●</span>カテゴリ別の早見表</h2>
-<p class="h2sub">◎=使える ／ ×=使えない です。</p>
+<h2><span class="mark">●</span>エラー文から原因をさがす</h2>
+<p class="h2sub">出てきたエラー文の型に近いものを探してください。</p>
+<div class="tablewrap">
+<table class="cmp">
+<tr><th>エラー文の型</th><th>意味</th><th>直し方</th></tr>
+<tr>
+<td class="q">&quot;○○&quot; is not a valid value for Size Type<br>&quot;○○&quot; is not a valid value for Size</td>
+<td>値がリストにない</td>
+<td>カテゴリ別カードの語に直す(Size Type に L を入れている例が多い)</td>
+</tr>
+<tr>
+<td class="q">&quot;Regular&quot; is not a valid Size Type for the Size &quot;40&quot;</td>
+<td>Size と Size Type の組み合わせ違反</td>
+<td>レディースの裸の数字は Plus 扱いなので EU 40 / IT 40 と書くか、実寸から S/M/L に読み替えて Regular にする</td>
+</tr>
+<tr>
+<td class="q">必須項目未入力・NA</td>
+<td>必須項目の欠落</td>
+<td>カードの必須項目を全部埋める</td>
+</tr>
+</table>
+</div>
 
+<h2><span class="mark">●</span>Size Type とは</h2>
+<p>Size Type は体型区分であって、サイズそのものではありません。服のカテゴリだけにある項目で、帽子・バッグ・靴にはありません。</p>
+<p>レディースは6値: <code>Regular</code> / <code>Plus</code> / <code>Petites</code> / <code>Tall</code> / <code>Juniors</code> / <code>Maternity</code>。メンズは2値: <code>Regular</code> / <code>Big &amp; Tall</code>。</p>
+<p>表記は頭文字を大文字にします。<code>Petites</code> は複数形です。<code>Big &amp; Tall</code> は&amp;の前後に半角スペースを入れます。既定は <code>Regular</code> です。</p>
+
+<h2><span class="mark">●</span>Size と Size Type の組み合わせ</h2>
+<p class="h2sub">Size Type を Regular にしたときに、Size 欄に書ける言葉の範囲です。</p>
+<div class="tablewrap">
+<table class="cmp">
+<tr><th>項目</th><th>レディース Regular</th><th>メンズ Regular</th></tr>
+<tr><td>文字サイズ</td><td>3XS〜XL、2XL</td><td>2XS〜XL、2XL</td></tr>
+<tr><td>裸の数字</td><td>0〜16 は米国サイズで可。18以上は Plus 専用</td><td>28〜50 は可。52以上は Big &amp; Tall 専用</td></tr>
+<tr><td>国別表記</td><td>EU 32〜50 / IT 36〜54 / FR 32〜50 / UK 4〜22</td><td>EU・IT・FR 42〜60</td></tr>
+<tr><td>One Size</td><td>可</td><td>可。ただしスーツ 3001・ドレスシャツ 57991 は不可</td></tr>
+<tr><td>S/M 等の複合</td><td>トップス・ワンピース・セーター・スーツのみ可。パンツ・ジーンズ・ショーツ・スカートは不可</td><td>Tシャツ・カジュアルシャツのみ可</td></tr>
+</table>
+</div>
+<p class="h2sub">迷ったら3つの決め事どおり文字サイズ＋Regularにすれば、どのカテゴリでも通ります(28カテゴリ全てで確認済み)。</p>
+
+<h2><span class="mark">●</span>カテゴリ別の必須項目</h2>
+<p class="h2sub">「見落とし注意」は、必須なのに空欄にしがちな項目です。値はカードに書かれた語だけを使ってください。n が多い項目は代表例だけを載せています。</p>
+<h3 class="grouph3">レディース服</h3>
 <div class="cards">
-
 <div class="card">
-<h3><span class="icon">🧢</span>帽子</h3>
-<p class="cid">メンズ 52365 ／ レディース 45230</p>
-<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ng">S/M・M/L ×</span></div>
-<p>使えるのは XS〜XL、帽子サイズの数字（例 <code>7 1/2</code>）、<code>One Size</code> だけです。</p>
-<div class="how"><b>書き方:</b> フリーサイズ・Free・「58cm」などのcm表記・S/M → ぜんぶ <code>One Size</code> に。「7 1/2 / 59.6cm」のような併記は <code>7 1/2</code> だけ残します。<code>Adjustable</code> はレディースのみOK（メンズは×）。</div>
+<h3><span class="icon">👚</span>トップス</h3>
+<p class="cid">53159 ・ Women &gt; Women's Clothing &gt; Tops</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M・M/L・L/XL・XS/S 可</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Type:</b> Blouse、Button-Up、Polo、Tank、T-Shirt <span class="chip ng">見落とし注意</span></p>
 </div>
-
 <div class="card">
-<h3><span class="icon">👕</span>Tシャツ・トップス</h3>
-<p class="cid">メンズTシャツ 15687 ／ レディーストップス 53159</p>
-<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ok">S/M・M/L ◎</span></div>
-<p>ここはゆるめです。<code>One Size</code> も、<code>S/M</code>・<code>M/L</code>・<code>L/XL</code> のような表記も、XS〜XLや数字サイズもそのまま使えます。</p>
-<div class="how"><b>書き方:</b> フリーサイズだけ <code>One Size</code> に直せばOKです。</div>
+<h3><span class="icon">👗</span>ワンピース</h3>
+<p class="cid">63861 ・ Women &gt; Women's Clothing &gt; Dresses</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M・M/L・L/XL・XS/S 可</p>
+<p><b>Style:</b> A-Line、Ball Gown、Blouson、Bodycon、Fit & Flare、Jacket Dress、Kaftan、Maxi、Mermaid、Mini、Overall Dress、Pencil Dress、Sheath、Shift、Shirt Dress、Slip Dress、Sundress、Sweater Dress、Tank Dress、Trapeze & Swing、T-Shirt Dress、Wrap Dress <span class="chip ng">見落とし注意</span></p>
+<p><b>Dress Length:</b> Short、Knee Length、Midi、Long、Hi-Low、Asymmetric <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
 </div>
-
 <div class="card">
-<h3><span class="icon">🤵</span>スーツ（メンズ）</h3>
-<p class="cid">3001</p>
-<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ng">One Size ×</span><span class="chip ng">S/M ×</span><span class="chip ng">空欄も ×</span></div>
-<p>いちばん厳しいカテゴリです。<code>One Size</code> も複合表記も使えず、空欄にもできません。</p>
-<div class="how"><b>書き方:</b> 決められた76種類（2XS〜8XL、数字28〜62、Big系、Tall系、IT・EU・FR表記）の中から、実寸に合うものを必ず選びます。</div>
+<h3><span class="icon">🩱</span>スカート</h3>
+<p class="cid">63864 ・ Women &gt; Women's Clothing &gt; Skirts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜38（2刻み、000・00 を含む） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
+<p><b>Type:</b> Set、Skirt、Skort <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> A-Line、Bandage、Cargo、Flare、Maxi、Mini、Peasant、Pettiskirt、Pleated、Skater、Skort、Straight & Pencil、Trumpet、Tulip、Tutu、Wrap <span class="chip ng">見落とし注意</span></p>
+<p><b>Skirt Length:</b> Short、Knee Length、Midi、Long <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
 </div>
-
 <div class="card">
-<h3><span class="icon">👩‍💼</span>スーツ（レディース）</h3>
-<p class="cid">63865</p>
-<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ok">S/M ◎</span></div>
-<p>メンズと違ってこちらはゆるめです。<code>One Size</code> も <code>S/M</code> などもOKです。</p>
+<h3><span class="icon">👖</span>パンツ</h3>
+<p class="cid">63863 ・ Women &gt; Women's Clothing &gt; Pants</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む）とウエストインチ 23〜33 ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
+<p><b>Style:</b> Ankle、Bloomer、Capri、Cargo、Carpenter、Chino、Cropped、Dress Pants、Harem、Jegging、Jogger、Khakis、Overalls、Paperbag、Pedal Pusher、Rain Pants、Snow Pants、Sweatpants、Windbreaker <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
 </div>
-
 <div class="card">
-<h3><span class="icon">🧥</span>コート・ジャケット（メンズ）</h3>
-<p class="cid">57988</p>
-<div class="verdicts"><span class="chip ng">Size欄は必須</span><span class="chip ok">One Size ◎</span><span class="chip ng">S/M・M/L ×</span></div>
-<p><code>One Size</code> は使えますが、<code>S/M</code>・<code>M/L</code> のような複合表記は使えません。XS〜XLや数字サイズはOKです。</p>
+<h3><span class="icon">👖</span>ジーンズ</h3>
+<p class="cid">11554 ・ Women &gt; Women's Clothing &gt; Jeans</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む）とウエストインチ 23〜33 ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
+<p><b>Style:</b> Ankle、Bootcut、Boyfriend、Capri、Cropped、Flared、Jegging、Khakis、Mom、Paperbag、Skinny、Straight、Tapered、Wide-Leg <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
 </div>
-
 <div class="card">
-<h3><span class="icon">👜</span>バッグ</h3>
-<p class="cid">レディース 169291 ／ メンズ 52357</p>
-<div class="verdicts"><span class="chip opt">Size欄は入れなくてOK</span><span class="chip ng">One Size ×</span></div>
-<p>使えるのは <code>Micro / Mini / Small / Medium / Large / Extra Large / Nano</code> の7つだけ。<code>One Size</code> は使えません。</p>
-<div class="how"><b>書き方:</b> 迷ったら<b>空欄のまま</b>にするのが安全です（もともと必須ではありません）。入れるなら大きさに合わせて <code>Small</code> / <code>Medium</code> / <code>Large</code> などを選びます。</div>
+<h3><span class="icon">🩳</span>ショートパンツ</h3>
+<p class="cid">11555 ・ Women &gt; Women's Clothing &gt; Shorts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Style:</b> Bermuda、Biker、Boyfriend、Cargo、Chino、Compression、Culotte、Cut-Off、Hot Pants、Mom、Paperbag、Sailor、Shortalls、Skimmer、Sweat、Utility、Wrap <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、00 を含む）とウエストインチ 23〜33 ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
 </div>
-
+<div class="card">
+<h3><span class="icon">🧥</span>コート・ジャケット・ベスト</h3>
+<p class="cid">63862 ・ Women &gt; Women's Clothing &gt; Coats, Jackets &amp; Vests</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、00 を含む） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M・M/L・L/XL 可</p>
+<p><b>Type:</b> Blazer、Cape、Coat、Coatigan、Jacket、Poncho、Vest <span class="chip ng">見落とし注意</span></p>
+<p><b>Outer Shell Material:</b> 100% Cashmere、100% Silk、100% Wool、Acetate、Acrylic、Acrylic Blend、Alpaca、Angora、Animal Hair、Aramid、Bamboo、Camel、Cashgora、Cashmere、Cashmere Blend、Cotton…ほか全65種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> 3-in-1 Jacket、Anorak、Basic Jacket、Biker、Bomber Jacket、Kimono、Military Jacket、Motorcycle Jacket、Overcoat、Parka、Pea Coat、Puffer Jacket、Quilted、Rain Coat、Trench Coat、Varsity Jacket、Windbreaker <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
 </div>
-
-<h2><span class="mark">●</span>サイズのほかに必ず入れる項目</h2>
-<p class="h2sub">ここが空欄でも同じようにエラーになる可能性があります。</p>
-<ul class="soft">
-<li><span class="lbl">洋服のカテゴリ:</span> <code>Size Type</code>（Regular / Big &amp; Tall などから選ぶ）・<code>Department</code>・<code>Brand</code>・<code>Color</code> も必須です。</li>
-<li><span class="lbl">バッグ:</span> <code>Brand</code>・<code>Exterior Material</code>（メンズは <code>Material</code>）・<code>Style</code>・<code>Exterior Color</code>（メンズは <code>Color</code>）・<code>Department</code> が必須です。</li>
-<li><span class="lbl">共通の約束:</span> 必須の欄に「NA」のような仮の言葉を入れない。実寸のcmはタイトルや説明文に書けば情報は残せます。</li>
-</ul>
+<div class="card">
+<h3><span class="icon">🧶</span>セーター</h3>
+<p class="cid">63866 ・ Women &gt; Women's Clothing &gt; Sweaters</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、00 を含む） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M・M/L・L/XL 可</p>
+<p><b>Style:</b> Cape、Cardigan、Full Zip、Henley、Pullover、Shrug、Tunic、Vest、Wrap <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+</div>
+<div class="card">
+<h3><span class="icon">👔</span>スーツ</h3>
+<p class="cid">63865 ・ Women &gt; Women's Clothing &gt; Suits &amp; Suit Separates</p>
+<p><b>Style:</b> Pant Suit、Shorts Suit、Skirt Suit、Tuxedo <span class="chip ng">見落とし注意</span></p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0・2・4・6・8・10・12・16（00 を含む、14 は無し） ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M・M/L・L/XL・XS/S 可</p>
+<p><b>Type:</b> Blazer、Sport Coat、Suit、Suit Jacket、Suit Pants、Suit Set、Suit Skirt、Suit Top、Suit Vest <span class="chip ng">見落とし注意</span></p>
+</div>
+</div>
+<h3 class="grouph3">メンズ服</h3>
+<div class="cards">
+<div class="card">
+<h3><span class="icon">👕</span>Tシャツ</h3>
+<p class="cid">15687 ・ Men &gt; Men's Clothing &gt; Shirts &gt; T-Shirts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 28〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ S/M・M/L・L/XL・XS/S 可</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+</div>
+<div class="card">
+<h3><span class="icon">🧢</span>カジュアルシャツ</h3>
+<p class="cid">57990 ・ Men &gt; Men's Clothing &gt; Shirts &gt; Casual Button-Down Shirts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 28〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ S/M・M/L・L/XL・XS/S 可</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+</div>
+<div class="card">
+<h3><span class="icon">🤵</span>ドレスシャツ</h3>
+<p class="cid">57991 ・ Men &gt; Men's Clothing &gt; Shirts &gt; Dress Shirts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 首回り 14〜22.5（0.5刻み）・体型表記 30〜62（2刻み） ／ 国別表記なし ／ One Size 不可 ／ 複合表記なし</p>
+</div>
+<div class="card">
+<h3><span class="icon">🧶</span>セーター</h3>
+<p class="cid">11484 ・ Men &gt; Men's Clothing &gt; Sweaters</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL（数値サイズは無し） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Style:</b> Cardigan、Full Zip、Henley、Pullover、Vest <span class="chip ng">見落とし注意</span></p>
+</div>
+<div class="card">
+<h3><span class="icon">🧥</span>コート・ジャケット・ベスト</h3>
+<p class="cid">57988 ・ Men &gt; Men's Clothing &gt; Coats, Jackets &amp; Vests</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 28〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Type:</b> Blazer、Cape、Coat、Coatigan、Jacket、Poncho、Vest <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> 3-in-1 Jacket、Anorak、Biker、Bomber Jacket、Military Jacket、Motorcycle Jacket、Overcoat、Parka、Pea Coat、Puffer Jacket、Quilted、Rain Coat、Trench Coat、Varsity Jacket、Windbreaker <span class="chip ng">見落とし注意</span></p>
+<p><b>Outer Shell Material:</b> Acetate、Acrylic、Alpaca、Angora、Animal Hair、Aramid、Bamboo、Camel、Cashgora、Cashmere、Cotton、Cotton Blend、Cupro、Elastodiene、Elastolefin、Elastomultiester…ほか全59種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+</div>
+<div class="card">
+<h3><span class="icon">👖</span>パンツ</h3>
+<p class="cid">57989 ・ Men &gt; Men's Clothing &gt; Pants</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 26〜32（1刻み）・34〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Inseam:</b> 24 in、25 in、26 in、27 in、28 in、29 in、30 in、31 in、32 in、33 in、34 in、35 in、36 in、37 in、38 in <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> Ankle、Capri、Cargo、Carpenter、Chino、Cropped、Dress Pants、Jogger、Khakis、Overalls、Paperbag、Pedal Pusher、Rain Pants、Snow Pants、Sweatpants、Windbreaker <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+</div>
+<div class="card">
+<h3><span class="icon">👖</span>ジーンズ</h3>
+<p class="cid">11483 ・ Men &gt; Men's Clothing &gt; Jeans</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 24〜32（1刻み）・34〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Inseam:</b> 24 in、25 in、26 in、27 in、28 in、29 in、30 in、31 in、32 in、33 in、34 in、35 in、36 in、37 in、38 in <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Style:</b> Ankle、Bootcut、Capri、Cropped、Flared、Khakis、Paperbag、Skinny、Straight、Tapered、Wide-Leg <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+</div>
+<div class="card">
+<h3><span class="icon">🩳</span>ショートパンツ</h3>
+<p class="cid">15689 ・ Men &gt; Men's Clothing &gt; Shorts</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 26〜32（1刻み）・34〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Style:</b> Bermuda、Biker、Cargo、Chino、Sweat <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+</div>
+<div class="card">
+<h3><span class="icon">👔</span>スーツ</h3>
+<p class="cid">3001 ・ Men &gt; Men's Clothing &gt; Suits &amp; Suit Separates</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 28〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 不可 ／ 複合表記なし</p>
+<p><b>Type:</b> Blazer、Sport Coat、Suit、Suit Jacket、Suit Pants、Suit Vest <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Style:</b> 2 Piece、3 Piece、Tuxedo <span class="chip ng">見落とし注意</span></p>
+</div>
+</div>
+<h3 class="grouph3">帽子</h3>
+<div class="cards">
+<div class="card">
+<h3><span class="icon">🧢</span>帽子（メンズ）</h3>
+<p class="cid">52365 ・ Men &gt; Men's Accessories &gt; Hats</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Style:</b> 5 Panel、Army Cap、Balaclava、Baseball Cap、Beanie、Beret、Boonie Hat、Bowler Hat、Bucket Hat、Cowboy Hat、Docker Cap、Do-rag、Fedora、Flat Cap、Golf Hat、Homburg Hat…ほか全30種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Size:</b> XS・S・M・L・XL ／ 帽子サイズ 6〜8 1/2（8分の1刻み表記を含む、例 7 1/2） ／ One Size 可 ／ Adjustable は無し（メンズ限定カテゴリのため）</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+</div>
+<div class="card">
+<h3><span class="icon">👒</span>帽子（レディース）</h3>
+<p class="cid">45230 ・ Women &gt; Women's Accessories &gt; Hats</p>
+<p><b>Style:</b> 5 Panel、Army Cap、Aviator/Pilot、Balaclava、Bandana、Baseball Cap、Beanie、Beret、Bobble Hat、Bonnet、Boonie Hat、Boshi、Bowler Hat、Bucket Hat、Capuchon、Cloche…ほか全43種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Size:</b> XS・S・M・L・XL ／ 帽子サイズ 6〜8 1/2（8分の1刻み表記を含む、例 7 1/2） ／ One Size 可 ／ Adjustable 可</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+</div>
+</div>
+<h3 class="grouph3">バッグ</h3>
+<div class="cards">
+<div class="card">
+<h3><span class="icon">👜</span>バッグ（レディース）</h3>
+<p class="cid">169291 ・ Women &gt; Women's Bags &amp; Handbags</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Exterior Material:</b> Acetate、Acrylic、Alfa、Alginate、Alpaca、Aluminum、Angora、Animal Hair、Aramid、Bamboo、Beaver、Boucle、Brass、Camel、Canvas、Carbon Fiber…ほか全95種</p>
+<p><b>Style:</b> Backpack、Belt Bag & Fanny Pack、Briefcase/Document Case、Bucket & Drawstring Bag、Clutch、Crossbody、Duffle、Gym Bag、Hobo Bag、Laptop Bag、Messenger Bag、Saddle Bag、Satchel/Top Handle Bag、Shoulder Bag、Sling Bag、Top Handle Bag、Tote <span class="chip ng">見落とし注意</span></p>
+<p><b>Exterior Color:</b> 公式候補 519 色。Black・Brown・Beige・Blue・Gray・White など基本色でよい</p>
+<p><b>Department:</b> Women、Unisex Adults</p>
+<p><b>Size:</b> Micro・Mini・Small・Medium・Large・Extra Large・Nano の7種のみ ／ One Size は使えない ／ Size 自体は必須項目ではない（迷ったら空欄でよい）</p>
+</div>
+<div class="card">
+<h3><span class="icon">💼</span>バッグ（メンズ）</h3>
+<p class="cid">52357 ・ Men &gt; Men's Accessories &gt; Bags</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>Material:</b> Acetate、Acrylic、Alfa、Alginate、Alpaca、Angora、Animal Hair、Aramid、Bamboo、Beaver、Camel、Canvas、Cotton、Cotton Blend、Cupro、Elastodiene…ほか全60種</p>
+<p><b>Style:</b> Backpack、Belt Bag & Fanny Pack、Briefcase/Document Case、Clutch、Crossbody、Duffle、Gym Bag、Laptop Bag、Messenger Bag、Saddle Bag、Satchel、Shoulder Bag、Top Handle Bag、Tote <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Size:</b> Micro・Mini・Small・Medium・Large・Extra Large・Nano の7種のみ ／ One Size は使えない ／ Size 自体は必須項目ではない（迷ったら空欄でよい）</p>
+</div>
+</div>
+<h3 class="grouph3">靴</h3>
+<div class="cards">
+<div class="card">
+<h3><span class="icon">👟</span>スニーカー（メンズ）</h3>
+<p class="cid">15709 ・ Men &gt; Men's Shoes &gt; Athletic Shoes</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 2、2.5、3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5…ほか全37種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Copper、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+</div>
+<div class="card">
+<h3><span class="icon">🥿</span>カジュアルシューズ（メンズ）</h3>
+<p class="cid">24087 ・ Men &gt; Men's Shoes &gt; Casual Shoes</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 2、2.5、3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5…ほか全37種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Style:</b> Boat Shoe、Clog、Espadrille、Fisherman、Flip Flop、Loafer、Moccasin、Mule、Slide、Slip-On、Sneaker、Sock <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Upper Material:</b> 100% Cotton、100% Silk、100% Wool、Bullhide Leather、Cotton、Cotton Blend、Faux Leather、Faux Silk、Faux Suede、Hemp、Leather、Linen、Linen Blend、Lyocell、Nubuck、Nylon…ほか全31種</p>
+</div>
+<div class="card">
+<h3><span class="icon">👞</span>革靴（メンズ）</h3>
+<p class="cid">53120 ・ Men &gt; Men's Shoes &gt; Dress Shoes</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 2、2.5、3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5…ほか全37種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Style:</b> Brogue、Derby、Monk Strap、Oxford <span class="chip ng">見落とし注意</span></p>
+<p><b>Upper Material:</b> 100% Cotton、100% Silk、100% Wool、Bullhide Leather、Cashmere、Cotton、Cotton Blend、Faux Fur、Faux Leather、Faux Silk、Faux Suede、Fur、Hemp、Leather、Linen、Linen Blend…ほか全34種</p>
+</div>
+<div class="card">
+<h3><span class="icon">🥾</span>ブーツ（メンズ）</h3>
+<p class="cid">11498 ・ Men &gt; Men's Shoes &gt; Boots</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 2、2.5、3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5…ほか全37種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> Biker、Bootie、Chelsea、Chukka、Combat、Desert、Rain Boot、Shearling Style、Slip-On、Snow Boot、Western <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Men、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Upper Material:</b> 100% Cotton、100% Silk、100% Wool、Alpaca、Angora、Bullhide Leather、Cotton、Cotton Blend、Faux Fur、Faux Leather、Faux Silk、Faux Suede、Fur、Hemp、Leather、Lyocell…ほか全37種</p>
+</div>
+<div class="card">
+<h3><span class="icon">👟</span>スニーカー（レディース）</h3>
+<p class="cid">95672 ・ Women &gt; Women's Shoes &gt; Athletic Shoes</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5、10、10.5…ほか全38種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Copper、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+</div>
+<div class="card">
+<h3><span class="icon">🥾</span>ブーツ（レディース）</h3>
+<p class="cid">53557 ・ Women &gt; Women's Shoes &gt; Boots</p>
+<p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
+<p><b>US Shoe Size:</b> 3、3.5、4、4.5、5、5.5、6、6.5、7、7.5、8、8.5、9、9.5、10、10.5…ほか全38種 <span class="chip ng">見落とし注意</span></p>
+<p><b>Style:</b> Biker、Bootie、Chelsea、Chukka、Combat、Desert、Platform、Rain Boot、Riding Boot、Shearling Style、Slip-On、Snow Boot、Sock、Western <span class="chip ng">見落とし注意</span></p>
+<p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
+<p><b>Department:</b> Women、Teens、Unisex Adults</p>
+<p><b>Upper Material:</b> 100% Cotton、100% Silk、100% Wool、Bullhide Leather、Cashmere、Cotton、Cotton Blend、Faux Fur、Faux Leather、Faux Silk、Faux Suede、Fur、Hemp、Jute、Leather、Linen…ほか全38種</p>
+</div>
+</div>
+<h2><span class="mark">●</span>靴のサイズ</h2>
+<p>靴には Size 欄はありません。かわりに <code>US Shoe Size</code> が必須です。数値は0.5刻みで、メンズは 2〜20、レディースは 3〜21.5 です。</p>
+<p class="h2sub">cm から US への換算表は、このページでは未調査です。</p>
 
 <h2><span class="mark">●</span>スキルに追加する時の指示文</h2>
 <p class="h2sub">AIにルールを覚えさせる時は、下の文をそのままコピーして貼り付けてください。</p>
 <div class="instbox">
 <button class="copybtn" id="copyBtn" type="button">コピー</button>
-<pre class="inst" id="instText">eBayの Item Specifics「Size」のルールを、翻訳スキル（Item Specifics 生成規則）に追加してください。
+<pre class="inst" id="instText">eBayのアパレル出品ルールを、翻訳・出品作成のスキルに追加してください。
 
-【原則】
-- Size は eBay 公式の許容値のみ使用する。許容値はカテゴリごとに異なるため、「迷ったら One Size」を全カテゴリ共通にしない。リスト外の値（Free / 58cm / 55-61cm / NA 等）は「902:ebay更新エラー」で登録に失敗する（2026-09-01 Taxonomy API 実測）。
-- 実寸 cm は Title・Description に残す（情報は失われない）。
-- 必須 Item Specifics に「NA」等のプレースホルダを入れない。
+【3つの決め事】
+Size Type は常に Regular にする。大きいサイズ専門で出品する場合だけ例外にする。
+Size は文字サイズ S、M、L、XL だけを使う。タグが数字でも実寸から文字に読み替える。cm、Free、裸の数字はそのまま使わない。One Size は帽子と小物だけで使う。
+必須項目に NA を入れない。Department は Men か Women のどちらかにする。Color は公式17色から選ぶ。Brand は不明なら Unbranded にする。
 
-【カテゴリ別ルール】
-1. 帽子（Men 52365 / Women 45230 / Boys 57884）: 許容値は XS / S / M / L / XL / 帽子サイズ数値（6〜8 1/2、例 7 1/2）/ One Size。Adjustable は Women・Boys のみ可（Men 52365 には無い）。S/M・M/L 等の複合表記は不可。変換: フリーサイズ・Free・単独cm・範囲cm・S/M・M/L → One Size。「7 1/2 / 59.6cm」等の併記 → 7 1/2 のみ。
-2. Tシャツ・トップス（メンズTシャツ 15687 / レディーストップス 53159）: One Size 可。S/M / M/L / L/XL / XS/S の複合表記も可。XS〜XL 等の文字サイズ・数値サイズも可。フリーサイズ → One Size。
-3. メンズスーツ（Suits &amp; Suit Separates 3001）: One Size 不可。S/M 等の複合表記も不可。Size 必須のため空欄も不可。許容76種（2XS〜8XL / 数値28〜62 / Big 1X〜6X / ST・MT・LT〜6XLT の Tall 系 / IT・EU・FR 表記）から実寸に基づき必ず選ぶ。
-4. レディーススーツ（63865）: One Size 可。S/M 等の複合表記も可。
-5. メンズコート・ジャケット（57988）: One Size 可。S/M・M/L は不可。
-6. バッグ（レディース 169291 / メンズ 52357）: Size は必須ではない。許容値は Micro / Mini / Small / Medium / Large / Extra Large / Nano の7種のみで One Size 不可。判断できなければ Size は空欄にする（無理に入れない）。入れる場合は実寸に応じて Small / Medium / Large 等。
+【必須項目の埋め方】
+アパレル(Clothing, Shoes & Accessories 配下)のカテゴリIDが決まったら、このページ(URL: https://naokijodan.github.io/ebay-size-guide/ )のカテゴリ別カードにある必須項目を全部埋める。値はカードに書かれた語だけを使い、カードに無い語を作らない。
 
-【Size 以外の必須項目】
-- 衣類カテゴリ: Size Type（Regular / Big &amp; Tall 等の選択式）・Department・Brand・Color も必須。空欄にしない。
-- バッグ: Brand・Exterior Material（メンズは Material）・Style・Exterior Color（メンズは Color）・Department が必須。空欄にしない。
-- 上記以外のカテゴリで Size を求められた場合は、リスト外の値を推測で入れず、公式許容値（Taxonomy API getItemAspectsForCategory）を確認してから入れる。</pre>
+【Size と Size Type の組み合わせ】
+文字サイズは、レディースが3XSからXLと2XL、メンズが2XSからXLと2XLまで使える。
+裸の数字は、レディースが0から16は米国サイズとして使えるが、18以上はPlus専用になる。メンズは28から50が使えるが、52以上はBig & Tall専用になる。
+国別表記は、レディースがEU、IT、FR、UKの4種類、メンズがEU、IT、FRの3種類で使える。
+One Sizeは、レディース・メンズとも基本的に使えるが、メンズスーツ(3001)とメンズドレスシャツ(57991)では使えない。
+S/Mのような複合表記は、レディースはトップス・ワンピース・セーター・スーツのみで使え、パンツ・ジーンズ・ショーツ・スカートでは使えない。メンズはTシャツとカジュアルシャツのみで使える。
+
+【書き込み後の確認】
+書き込みが終わったら、Size Type に文字サイズが入っていないこと、必須項目に NA や空欄が無いことを機械的に確認する。</pre>
 </div>
 
-<p class="src">出典: eBay公式 Taxonomy API（getItemAspectsForCategory、アメリカのカテゴリツリー）を2026年9月1日に実測した結果です。子供用（ボーイズ 57884 など）は出品しない方針のため、カードからは省いています。API上ではSize欄は自由入力の扱いですが、EAGLE経由の実際の登録ではリスト外の値がエラーになった実績があります（エラー判定がeBay側かEAGLE側かは未確認）。</p>
+<p class="src">出典: eBay公式 Taxonomy API(getItemAspectsForCategory、EBAY_US)を2026年9月2日に取得したデータです。対象は28カテゴリです。注記: API上 Size は自由入力扱いですが、実運用ではリスト外の値が弾かれた実績にもとづいています。大文字・小文字やアクセント記号の違いで弾かれるかどうかは未確認です。</p>
 </div>
 <script>
 document.getElementById('copyBtn').addEventListener('click',function(){
