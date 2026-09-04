@@ -87,7 +87,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <p class="bp-title">いちばん大事な3つの決め事</p>
 <ol>
 <li><b>Size Type は常に Regular にする。</b>大きいサイズ専門で出品する場合以外は、他の値を選ばない。</li>
-<li><b>Size は文字サイズ S・M・L・XL だけを使う。</b>タグに数字が書いてあっても、実寸から文字サイズに読み替える。cm・Free・裸の数字・S/M のような複合表記はそのまま使わない。One Size は帽子・小物だけで使う。</li>
+<li><b>Size は文字サイズ S・M・L・XL だけを使う。</b>タグに数字が書いてあっても、実寸から文字サイズに読み替える。cm・Free・裸の数字・S/M のような複合表記はそのまま使わない。One Size は帽子・小物だけで使う。<br>例外はジーンズ・パンツだけ。ウエストのインチ数値（タグの W30 なら 30、実寸 cm は 2.54 で割って最も近い値）を Size にする。Regular で通るのはレディース 23〜33、メンズジーンズ 24〜32 と 34〜50 の偶数、メンズパンツ 26〜32 と 34〜50 の偶数。範囲外は文字サイズに読み替える。あわせて Waist Size（任意）に 30 in、メンズは必須の Inseam に 32 in を入れる。</li>
 <li><b>必須項目に NA を入れない。</b>Department は Men か Women のどちらかにする。Color は公式17色から選ぶ。Brand は不明なら Unbranded にする。</li>
 </ol>
 </div>
@@ -126,7 +126,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <table class="cmp">
 <tr><th>項目</th><th>レディース Regular</th><th>メンズ Regular</th></tr>
 <tr><td>文字サイズ</td><td>3XS〜XL、2XL</td><td>2XS〜XL、2XL</td></tr>
-<tr><td>裸の数字</td><td>0〜16 は米国サイズで可。18以上は Plus 専用</td><td>28〜50 は可。52以上は Big &amp; Tall 専用</td></tr>
+<tr><td>裸の数字</td><td>0〜16 は米国サイズで可。18以上は Plus 専用。ジーンズ・パンツはウエスト 23〜33 が Regular で可</td><td>28〜50 は可。52以上は Big &amp; Tall 専用。ジーンズはウエスト 24〜32・34〜50（偶数）、パンツは 26〜32・34〜50（偶数）が Regular で可</td></tr>
 <tr><td>国別表記</td><td>EU 32〜50 / IT 36〜54 / FR 32〜50 / UK 4〜22</td><td>EU・IT・FR 42〜60</td></tr>
 <tr><td>One Size</td><td>可</td><td>可。ただしスーツ 3001・ドレスシャツ 57991 は不可</td></tr>
 <tr><td>S/M 等の複合</td><td>使わない（APIには一部カテゴリで値があるが、eBay公式のサイズ標準化ガイドで「複数の Size を組み合わせた値」は非サポート）</td><td>使わない（同左）</td></tr>
@@ -177,6 +177,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
 <p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
 <p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む）とウエストインチ 23〜33 ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
+<p><b>Size の入れ方:</b> ウエストのインチ数値（23〜33 が Regular で可）を Size にする。<b>Waist Size</b>（任意）に 30 in 形式で併記</p>
 <p><b>Style:</b> Ankle、Bloomer、Capri、Cargo、Carpenter、Chino、Cropped、Dress Pants、Harem、Jegging、Jogger、Khakis、Overalls、Paperbag、Pedal Pusher、Rain Pants、Snow Pants、Sweatpants、Windbreaker <span class="chip ng">見落とし注意</span></p>
 <p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
 <p><b>Department:</b> Women、Teens、Unisex Adults</p>
@@ -187,6 +188,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
 <p><b>Size Type:</b> Regular、Plus、Petites、Tall、Juniors、Maternity（既定 Regular） <span class="chip ng">見落とし注意</span></p>
 <p><b>Size:</b> 文字サイズ 3XS〜XL・2XL ／ 数値 0〜16（2刻み、000・00 を含む）とウエストインチ 23〜33 ／ EU 32〜50・IT 36〜54・FR 32〜50・UK 4〜22 ／ One Size 可 ／ S/M等の複合表記は不可</p>
+<p><b>Size の入れ方:</b> ウエストのインチ数値（23〜33 が Regular で可）を Size にする。<b>Waist Size</b>（任意）に 30 in 形式で併記</p>
 <p><b>Style:</b> Ankle、Bootcut、Boyfriend、Capri、Cropped、Flared、Jegging、Khakis、Mom、Paperbag、Skinny、Straight、Tapered、Wide-Leg <span class="chip ng">見落とし注意</span></p>
 <p><b>Department:</b> Women、Teens、Unisex Adults</p>
 <p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
@@ -292,6 +294,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
 <p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
 <p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 26〜32（1刻み）・34〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Size の入れ方:</b> ウエストのインチ数値（26〜32、34〜50 の偶数が Regular で可）を Size にする。<b>Waist Size</b>（任意）に 30 in 形式で併記。Inseam は必須</p>
 <p><b>Inseam:</b> 24 in、25 in、26 in、27 in、28 in、29 in、30 in、31 in、32 in、33 in、34 in、35 in、36 in、37 in、38 in <span class="chip ng">見落とし注意</span></p>
 <p><b>Style:</b> Ankle、Capri、Cargo、Carpenter、Chino、Cropped、Dress Pants、Jogger、Khakis、Overalls、Paperbag、Pedal Pusher、Rain Pants、Snow Pants、Sweatpants、Windbreaker <span class="chip ng">見落とし注意</span></p>
 <p><b>Color:</b> Beige、Black、Blue、Brown、Clear、Gold、Gray、Green、Ivory、Multicolor、Orange、Pink、Purple、Red、Silver、White、Yellow</p>
@@ -303,6 +306,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 <p><b>Brand:</b> 自由入力。不明なら Unbranded</p>
 <p><b>Size Type:</b> Regular、Big & Tall（既定 Regular） <span class="chip ng">見落とし注意</span></p>
 <p><b>Size:</b> 文字サイズ 2XS〜XL・2XL ／ 数値 24〜32（1刻み）・34〜50（2刻み） ／ EU 42〜60・IT 42〜60・FR 42〜60 ／ One Size 可 ／ 複合表記なし</p>
+<p><b>Size の入れ方:</b> ウエストのインチ数値（24〜32、34〜50 の偶数が Regular で可）を Size にする。<b>Waist Size</b>（任意）に 30 in 形式で併記。Inseam は必須</p>
 <p><b>Inseam:</b> 24 in、25 in、26 in、27 in、28 in、29 in、30 in、31 in、32 in、33 in、34 in、35 in、36 in、37 in、38 in <span class="chip ng">見落とし注意</span></p>
 <p><b>Department:</b> Men、Teens、Unisex Adults</p>
 <p><b>Style:</b> Ankle、Bootcut、Capri、Cropped、Flared、Khakis、Paperbag、Skinny、Straight、Tapered、Wide-Leg <span class="chip ng">見落とし注意</span></p>
@@ -446,6 +450,7 @@ pre.inst{background:var(--card);border:1.5px solid var(--line);border-radius:18p
 【3つの決め事】
 Size Type は常に Regular にする。大きいサイズ専門で出品する場合だけ例外にする。
 Size は文字サイズ S、M、L、XL だけを使う。タグが数字でも実寸から文字に読み替える。cm、Free、裸の数字、S/Mのような複合表記はそのまま使わない。One Size は帽子と小物だけで使う。
+例外はジーンズ・パンツ(レディース11554・63863、メンズ11483・57989)だけで、ウエストのインチ数値をSizeにする(タグのW30なら30、実寸cmは2.54で割って最も近い値)。Regularで通る値はレディース23から33、メンズジーンズ24から32と34から50の偶数、メンズパンツ26から32と34から50の偶数。範囲外は文字サイズに読み替える。あわせてWaist Size(任意)に30 in、メンズは必須のInseamに32 inを入れる。
 必須項目に NA を入れない。Department は Men か Women のどちらかにする。Color は公式17色から選ぶ。Brand は不明なら Unbranded にする。
 
 【必須項目の埋め方】
@@ -453,7 +458,7 @@ Size は文字サイズ S、M、L、XL だけを使う。タグが数字でも�
 
 【Size と Size Type の組み合わせ】
 文字サイズは、レディースが3XSからXLと2XL、メンズが2XSからXLと2XLまで使える。
-裸の数字は、レディースが0から16は米国サイズとして使えるが、18以上はPlus専用になる。メンズは28から50が使えるが、52以上はBig & Tall専用になる。
+裸の数字は、トップス・ワンピース等の米国サイズでは、レディースが0から16は使えるが18以上はPlus専用になる。メンズは28から50が使えるが、52以上はBig & Tall専用になる。ジーンズ・パンツのウエスト数値は上の例外のとおり。
 国別表記は、レディースがEU、IT、FR、UKの4種類、メンズがEU、IT、FRの3種類で使える。
 One Sizeは、レディース・メンズとも基本的に使えるが、メンズスーツ(3001)とメンズドレスシャツ(57991)では使えない。
 S/Mのような複合表記(1つのSize欄に複数サイズ)は、全カテゴリで使わない。eBay公式のサイズ標準化ガイドで「S/M/Lなど複数のSizeを組み合わせた値」は非サポートとされている。
